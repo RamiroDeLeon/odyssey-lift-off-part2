@@ -13,7 +13,7 @@ const resolvers = {
     Track: {
         // The value of 'parent' arg is the current Track which
         // has an authorID thatwe can destructure.
-        author: ({ authorID }, _, { dataSources }) => {
+        author: async ({ authorID }, _, { dataSources }) => {
             return dataSources.trackAPI.getAuthor(authorID);
         }
     }
