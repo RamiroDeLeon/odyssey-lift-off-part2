@@ -41,7 +41,6 @@ async function startApolloServer() {
     resolvers, // Object with resolver functions.
   });
   const { url } = await startStandaloneServer(server, {
-    // This obj configures our server's options.
     context: async () => {
       const { cache } = server;
       return {
